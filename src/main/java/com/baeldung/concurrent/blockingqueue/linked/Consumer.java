@@ -1,4 +1,4 @@
-package com.baeldung.concurrent.blockingqueue.demo;
+package com.baeldung.concurrent.blockingqueue.linked;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
@@ -20,7 +20,7 @@ public class Consumer implements Runnable {
                 Integer number = queue.take();
 
                 if (number == -1) {
-                    System.out.println("Consumer: STOPPED.");
+                    System.out.println("=== Consumer: STOPPED.");
                     break;
                 }
                 consume(number);
@@ -39,7 +39,7 @@ public class Consumer implements Runnable {
         Random random = new Random();
 
         try {
-            Thread.sleep(random.nextInt(5000));
+            Thread.sleep(random.nextInt(4000));
         } catch (InterruptedException ie) { ie.printStackTrace(); }
 
         System.out.println("--------------------------> Consumer: processed " + number);

@@ -1,4 +1,4 @@
-package com.baeldung.concurrent.blockingqueue.demo;
+package com.baeldung.concurrent.blockingqueue.linked;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
